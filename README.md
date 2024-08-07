@@ -1,3 +1,5 @@
+# [![FedComp](logo.svg)]
+
 [![GitHub License](http://astrostore.it:8080/github/license/wibox/FedComp)](https://github.com/wibox/FedComp?tab=Apache-2.0-1-ov-file)
 [![GitHub Repo stars](http://astrostore.it:8080/github/stars/wibox/FedComp)](https://github.com/wibox/FedComp)
 [![Read the Docs](http://astrostore.it:8080/readthedocs/fedcomp)](https://fedcomp.readthedocs.io/en/latest/)
