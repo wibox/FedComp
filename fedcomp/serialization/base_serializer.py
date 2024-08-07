@@ -8,7 +8,7 @@ class BaseSerializer(ABC):
     Args:
         serialization_protocols : typing.Dict[str, typing.Callable] = Dict of serialization protocols and respective serialization and deserialization methods supported by the Serializer.
         
-        deserialization_protocols : typing.Dict[str, typing.Callable] = Dict of serialization protocols and respective serialization and deserialization methods supported by the Serializer.
+        deserialization_protocols : typing.Dict[str, typing.Callable] = Dict of deserialization protocols and respective serialization and deserialization methods supported by the Serializer.
     """
     def __init__(
         self,
