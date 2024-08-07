@@ -9,7 +9,7 @@
 
 FedComp is a composable Federated Learning framework with built-in simulation capabilities and load testing tools written in Python. 
 
-## Why FedComp was born?
+## Why FedComp is necessary?
 
 ## Philosophy
 
