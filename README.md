@@ -1,4 +1,4 @@
-# [![FedComp](logo.svg)]
+# ![FedComp](logo.svg)
 
 [![GitHub License](http://astrostore.it:8080/github/license/wibox/FedComp)](https://github.com/wibox/FedComp?tab=Apache-2.0-1-ov-file)
 [![GitHub Repo stars](http://astrostore.it:8080/github/stars/wibox/FedComp)](https://github.com/wibox/FedComp)
@@ -8,3 +8,11 @@
 ## What is FedComp?
 
 FedComp is a composable Federated Learning framework with built-in simulation capabilities and load testing tools written in Python. 
+
+## Why FedComp was born?
+
+## Philosophy
+
+## Usage
+
+## Contribute
