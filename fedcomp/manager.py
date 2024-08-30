@@ -1,0 +1,2 @@
+# lancia lo script di inizializzazione costruendo le immagini necessarie (pannello di controllo e profiler (da fare con django e gRPC))
+# a partire dalla connessione al demone docker indicato (url, TLS, autenticazione etc...)
