@@ -20,10 +20,10 @@ class BaseSerializer(ABC):
         
     @classmethod
     @abstractmethod
-    def serialize(self, serilization_protocol : str, model : typing.Any) -> typing.Any:
+    def serialize(cls, serilization_protocol : str, model : typing.Any) -> typing.Any:
         raise NotImplementedError
     
     @classmethod
     @abstractmethod
-    def deserialize(self, serialization_protocol : str, model : typing.Any) -> typing.Any:
+    def deserialize(cls, serialization_protocol : str, model : typing.Any) -> typing.Any:
         raise NotImplementedError
