@@ -7,6 +7,7 @@ app = FastAPI(title="My FastAPI App")
 
 app.include_router(api_router)
 
+
 @app.get("/")
 def root():
     return {"message": f"{settings.app_name} is running"}

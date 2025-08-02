@@ -4,9 +4,9 @@ from setuptools import find_packages, setup
 
 if os.path.exists("./requirements.txt"):
     with open("./requirements.txt") as f:
-        requirements = f.read().splitlines()
+        install_requires = f.read().splitlines()
 else:
-    requirements = list()
+    install_requires = list()
 
 setup(
     name="FedComp",
@@ -18,7 +18,7 @@ setup(
     python_requires="==3.13.*",
     package_dir={"": "src"},
     packages=find_packages(where="src"),
-    install_requires=requirements,
+    install_requires=install_requires,
     classifiers=[
         "Programming Language :: Python :: 3.13",
         "License :: OSI Approved :: MIT License",

@@ -5,5 +5,5 @@ build-backend = "setuptools.build_meta"
 [tool.ruff]
 line-length = 88
 src = ["src", "tests"]
-extend-select = ["I"]  # Import sorting
+lint.extend-select = ["I"]
 target-version = "py313"

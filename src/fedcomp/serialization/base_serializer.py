@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
-
-import typing
+from typing import Any, Callable, Dict
 
 
 class BaseSerializer(ABC):
@@ -14,18 +13,18 @@ class BaseSerializer(ABC):
 
     def __init__(
         self,
-        serialization_protocols: typing.Dict[str, typing.Callable],
-        deserialization_protocols: typing.Dict[str, typing.Callable],
+        serialization_protocols: Dict[str, Callable],
+        deserialization_protocols: Dict[str, Callable],
     ) -> None:
         self.serialization_protocols = serialization_protocols
         self.deserialization_protocols = deserialization_protocols
 
     @classmethod
     @abstractmethod
-    def serialize(cls, serilization_protocol: str, model: typing.Any) -> typing.Any:
+    def serialize(cls, serilization_protocol: str, model: Any) -> Any:
         raise NotImplementedError
 
     @classmethod
     @abstractmethod
-    def deserialize(cls, serialization_protocol: str, model: typing.Any) -> typing.Any:
+    def deserialize(cls, serialization_protocol: str, model: Any) -> Any:
         raise NotImplementedError

@@ -1,8 +1,9 @@
 from abc import ABC, abstractmethod
+
 from entities import UpdatedModel
 
 
-class BaseAlgorithm:
+class BaseAlgorithm(ABC):
     def __init__(self) -> None:
         pass
 
