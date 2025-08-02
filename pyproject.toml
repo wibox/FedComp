@@ -1,3 +1,9 @@
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 88
+src = ["src", "tests"]
+extend-select = ["I"]  # Import sorting
+target-version = "py313"

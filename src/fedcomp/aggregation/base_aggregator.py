@@ -2,8 +2,8 @@ from abc import ABC, abstractmethod
 
 from entities import AggregatedModel
 
-class BaseAggregator(ABC):
 
+class BaseAggregator(ABC):
     def __init__(self) -> None:
         pass
 

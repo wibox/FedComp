@@ -1,5 +1,6 @@
 import argparse
 
+
 class ManagerParser:
     def __init__(self) -> None:
         self.parser = argparse.ArgumentParser()
@@ -11,6 +12,6 @@ class ManagerParser:
 
     def get_parser(self):
         return self.parser
-    
+
     def get_arguments_collection(self):
         return vars(self.args)

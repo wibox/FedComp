@@ -1,8 +1,8 @@
 from base_algorithm import BaseAlgorithm
 from entities import UpdatedModel
 
-class FederatedAveraging(BaseAlgorithm):
 
+class FederatedAveraging(BaseAlgorithm):
     def __init__(self) -> None:
         pass
 

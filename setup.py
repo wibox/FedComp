@@ -1,5 +1,6 @@
-from setuptools import setup, find_packages
 import os
+
+from setuptools import find_packages, setup
 
 if os.path.exists("./requirements.txt"):
     with open("./requirements.txt") as f:
@@ -23,4 +24,9 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
+    entry_points={
+        "console_scripts": [
+            "fedcomp = fedcomp.__main__:main",
+        ]
+    },
 )
