@@ -1,0 +1,26 @@
+from setuptools import setup, find_packages
+import os
+
+if os.path.exists("./requirements.txt"):
+    with open("./requirements.txt") as f:
+        requirements = f.read().splitlines()
+else:
+    requirements = list()
+
+setup(
+    name="FedComp",
+    version="0.0.1",
+    author="Francesco Pagano",
+    description="",
+    long_description=open("README.md").read() if os.path.exists("README.md") else "",
+    long_description_content_type="text/markdown",
+    python_requires="==3.13.*",
+    package_dir={"": "src"},
+    packages=find_packages(where="src"),
+    install_requires=requirements,
+    classifiers=[
+        "Programming Language :: Python :: 3.13",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+)
