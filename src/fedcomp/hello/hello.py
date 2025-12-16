@@ -1,2 +1,2 @@
-def hello_world() -> str:
-    return "Hello, World! I'm FedComp, your favourite federation assistant!"
+def hello_world(completeness: str) -> str:
+    return f"Hello, World! I'm FedComp, your favourite federation assistant! \nCompleteness: {completeness}"
