@@ -1,12 +1,12 @@
-from fedcomp.serialization.base_serializer import BaseSerializer
-
 import traceback
 import typing
 
+import numpy as np
 import torch
 import torch.nn.functional as F
 
-import numpy as np
+from fedcomp.serialization.base_serializer import BaseSerializer
+
 
 class Cnn(torch.nn.Module):
     def __init__(self):
@@ -27,15 +27,15 @@ class Cnn(torch.nn.Module):
         x = self.fc3(x)
         return x
 
-def _json_serialization(model : typing.Any) -> typing.Union[typing.Any, None]:
+def _json_serialization(model : torch.nn.Module | typing.Any) -> typing.Union[typing.Any, None]:
     _serialized_model = None
     try:
         _serialized_model = {name: param.detach().cpu().numpy().tolist() for name, param in model.state_dict().items()}
         if len(_serialized_model.keys()) != len([_ for _ in model.state_dict().keys()]):
             raise Exception
     except Exception as e:
-        print(traceback.print_exc())
-        return _serialized_model
+        traceback.print_exc()
+        raise e
     finally:
         return _serialized_model
     
@@ -50,8 +50,8 @@ def _json_deserialization(serialized_model : typing.Any, model_name : str) -> ty
             tensor = torch.tensor(tensor_data)
             state_dict[name] = tensor
     except Exception as e:
-        print(traceback.print_exc())
-        return _deserialized_model
+        traceback.print_exc()
+        raise e
     finally:
         try:
             # HERE YOUR MODEL SHOULD BE APPROPRIATELY INITIALIZED
@@ -64,8 +64,8 @@ def _json_deserialization(serialized_model : typing.Any, model_name : str) -> ty
             _deserialized_model = nn
             return _deserialized_model
         except Exception as e:
-            print(traceback.print_exc())
-            return _deserialized_model
+            traceback.print_exc()
+            raise e
         finally:
             return _deserialized_model
 
